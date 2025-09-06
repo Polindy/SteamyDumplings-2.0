@@ -712,7 +712,7 @@ class SteamyDumplingsApp {
             <h3>General Inquiries</h3>
             <p>For general questions, suggestions, or feedback about Steamy Dumplings:</p>
             <ul>
-                <li><strong>Email:</strong> contact@steamydumplings.com</li>
+                <li><strong>Email:</strong> SteamyDumplings@outlook.com</li>
                 <li><strong>Response Time:</strong> We typically respond within 24-48 hours</li>
             </ul>
             
@@ -753,7 +753,7 @@ class SteamyDumplingsApp {
             <h3>Business Inquiries</h3>
             <p>For business partnerships or collaboration opportunities:</p>
             <ul>
-                <li><strong>Email:</strong> business@steamydumplings.com</li>
+                <li><strong>Email:</strong> SteamyDumplings@outlook.com</li>
                 <li><strong>Subject:</strong> Please include "Business Inquiry" in the subject line</li>
             </ul>
             
@@ -839,4 +839,5 @@ function showUpdateNotification() {
         }, 100);
     }
 }
+
 
