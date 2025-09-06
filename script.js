@@ -1,5 +1,92 @@
 // Modern ES6+ JavaScript for Steamy Dumplings
 class SteamyDumplingsApp {
+initFeatureRequests() {
+    // 🔒 Check if username exists in localStorage
+    let currentUser = localStorage.getItem("username");
+    if (!currentUser) {
+        let username = prompt("Enter your name (you won’t be able to change it later):");
+        if (!username) {
+            alert("⚠️ You must enter a name!");
+            location.reload();
+        } else {
+            let confirmUsername = confirm(`Are you sure? You won't be able to change it later!`);
+            if (confirmUsername) {
+                localStorage.setItem("username", username);
+                currentUser = username;
+            } else {
+                location.reload();
+            }
+        }
+    }
+    console.log("✅ Logged in as:", currentUser);
+
+    // Firebase Config (your same config)
+    const firebaseConfig = {
+        apiKey: "AIzaSyAlaCGseWSNF41sKqdS3_PqXABgpsKVVso",
+        authDomain: "feature-requests-bf962.firebaseapp.com",
+        projectId: "feature-requests-bf962",
+        storageBucket: "feature-requests-bf962.appspot.com",
+        messagingSenderId: "823579759336",
+        appId: "1:823579759336:web:e2faf82c62751a906def5d"
+    };
+
+    // Initialize Firebase
+    if (!firebase.apps.length) {
+        firebase.initializeApp(firebaseConfig);
+    }
+    const db = firebase.firestore();
+
+    const submitButton = document.getElementById("submit-request");
+    const featureInput = document.getElementById("feature-input");
+    const featureList = document.getElementById("feature-list");
+    const requestedFeaturesSection = document.getElementById("requested-features");
+
+    if (!submitButton || !featureInput) return;
+
+    // 📝 Submit New Feature Request
+    submitButton.addEventListener("click", () => {
+        const feature = featureInput.value.trim();
+        if (feature) {
+            db.collection("requests").add({
+                text: feature,
+                username: currentUser,
+                timestamp: firebase.firestore.FieldValue.serverTimestamp()
+            }).then(() => {
+                featureInput.value = "";
+            }).catch(error => {
+                console.error("❌ Error adding request:", error);
+            });
+        } else {
+            alert("⚠️ Please enter a feature request.");
+        }
+    });
+
+    // Realtime updates
+    db.collection("requests").orderBy("timestamp", "desc").onSnapshot(snapshot => {
+        requestedFeaturesSection.style.display = 'block';
+        featureList.innerHTML = "";
+        snapshot.forEach(doc => {
+            const request = doc.data();
+            const li = document.createElement("li");
+            li.innerHTML = `
+                <span>${request.text} <em>- ${request.username}</em></span>
+            `;
+
+            // Delete button if owner or admin
+            if (currentUser === request.username || currentUser === "PookieGPT") {
+                const deleteBtn = document.createElement("button");
+                deleteBtn.textContent = "❌ Delete";
+                deleteBtn.classList.add("delete-btn");
+                deleteBtn.addEventListener("click", () => {
+                    db.collection("requests").doc(doc.id).delete().catch(console.error);
+                });
+                li.appendChild(deleteBtn);
+            }
+            featureList.appendChild(li);
+        });
+    });
+}
+
     constructor() {
         this.games = new Map();
         this.filteredGames = new Map();
@@ -21,6 +108,7 @@ class SteamyDumplingsApp {
             console.log('Steamy Dumplings: Event listeners set up');
             this.updateStats();
             this.renderGames();
+            this.initFeatureRequests();
             this.hideLoading();
             this.showToast('Welcome to Steamy Dumplings!', 'success');
             console.log('Steamy Dumplings: App initialized successfully');
@@ -839,5 +927,4 @@ function showUpdateNotification() {
         }, 100);
     }
 }
-
 

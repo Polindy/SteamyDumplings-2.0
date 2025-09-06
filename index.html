@@ -47,35 +47,41 @@
             <p class="subtitle">The Ultimate Steam Manifest Database</p>
         </header>
         
-        <nav role="navigation" aria-label="Main navigation">
-            <ul role="tablist">
-                <li role="presentation">
-                    <button role="tab" aria-selected="true" aria-controls="home-panel" id="home-tab" class="tab-button active">
-                        <i class="fas fa-home" aria-hidden="true"></i> 
-                        <span>Home</span>
-                    </button>
-                </li>
-                <li role="presentation">
-                    <button role="tab" aria-selected="false" aria-controls="downloads-panel" id="downloads-tab" class="tab-button">
-                        <i class="fas fa-download" aria-hidden="true"></i> 
-                        <span>Downloads</span>
-                    </button>
-                </li>
-                <li role="presentation">
-                    <button role="tab" aria-selected="false" aria-controls="games-panel" id="games-tab" class="tab-button">
-                        <i class="fas fa-gamepad" aria-hidden="true"></i> 
-                        <span>Games</span>
-                    </button>
-                </li>
-                <li role="presentation">
-                    <button role="tab" aria-selected="false" aria-controls="steam-tools-panel" id="steam-tools-tab" class="tab-button">
-                        <i class="fab fa-steam" aria-hidden="true"></i> 
-                        <span>Steam Tools</span>
-                    </button>
-                </li>
-            </ul>
-        </nav>
-        
+<nav role="navigation" aria-label="Main navigation">
+    <ul role="tablist">
+        <li role="presentation">
+            <button role="tab" aria-selected="true" aria-controls="home-panel" id="home-tab" class="tab-button active">
+                <i class="fas fa-home" aria-hidden="true"></i> 
+                <span>Home</span>
+            </button>
+        </li>
+        <li role="presentation">
+            <button role="tab" aria-selected="false" aria-controls="downloads-panel" id="downloads-tab" class="tab-button">
+                <i class="fas fa-download" aria-hidden="true"></i> 
+                <span>Downloads</span>
+            </button>
+        </li>
+        <li role="presentation">
+            <button role="tab" aria-selected="false" aria-controls="games-panel" id="games-tab" class="tab-button">
+                <i class="fas fa-gamepad" aria-hidden="true"></i> 
+                <span>Games</span>
+            </button>
+        </li>
+        <li role="presentation">
+            <button role="tab" aria-selected="false" aria-controls="steam-tools-panel" id="steam-tools-tab" class="tab-button">
+                <i class="fab fa-steam" aria-hidden="true"></i> 
+                <span>Steam Tools</span>
+            </button>
+        </li>
+        <li role="presentation">
+            <button role="tab" aria-selected="false" aria-controls="feature-requests-panel" id="feature-requests-tab" class="tab-button">
+                <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                <span>Feature Requests</span>
+            </button>
+        </li>
+    </ul>
+</nav>
+
         <main role="main">
             <section id="home-panel" class="tab-panel active" role="tabpanel" aria-labelledby="home-tab">
                 <div class="hero">
@@ -93,6 +99,28 @@
                     </div>
                 </div>
             </section>
+
+<section id="feature-requests-panel" class="tab-panel" role="tabpanel" aria-labelledby="feature-requests-tab">
+    <div class="feature-requests-section">
+        <h2>Request Features</h2>
+        <p>Have an idea for a new feature? Let us know below!</p>
+        
+        <div class="feature-form">
+            <input type="text" id="feature-input" placeholder="Enter your feature request..." aria-label="Feature request">
+            <button class="neon-button" id="submit-request">
+                <i class="fas fa-paper-plane"></i> <span>Submit</span>
+            </button>
+        </div>
+
+        <p class="info-message">Requests are auto-deleted after 1 week.</p>
+
+        <div id="requested-features">
+            <h3>Requested Features</h3>
+            <ul id="feature-list" class="feature-list"></ul>
+        </div>
+    </div>
+</section>
+
             
             <section id="downloads-panel" class="tab-panel" role="tabpanel" aria-labelledby="downloads-tab">
                 <div class="search-section">
@@ -193,6 +221,10 @@
         </div>
     </div>
     
-    <script src="script.js"></script>
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+
+<script src="script.js"></script>
 </body>
 </html>

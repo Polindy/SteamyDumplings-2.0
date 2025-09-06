@@ -918,3 +918,56 @@ footer {
         margin-bottom: 10px;
     }
 }
+/* Feature Requests Section */
+.feature-requests-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.feature-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#feature-input {
+    flex: 1 1 250px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #9b59b6;
+    background: #1e1e2e;
+    color: #fff;
+    font-size: 1em;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.feature-list li {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #9b59b6;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.delete-btn:hover {
+    background: #c0392b;
+}
