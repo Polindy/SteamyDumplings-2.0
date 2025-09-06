@@ -1,0 +1,70 @@
+{
+  "name": "Steamy Dumplings - Steam Manifest Database",
+  "short_name": "Steamy Dumplings",
+  "description": "The Ultimate Steam Manifest Database - Search, download, and explore Steam game manifests",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#9b59b6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["games", "entertainment", "utilities"],
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiByeD0iMjQiIGZpbGw9InVybCgjZ3JhZGllbnQwX2xpbmVhcl8xXzEpIi8+CjxwYXRoIGQ9Ik05NiA0OEM3Ny4wMDk3IDQ4IDYyIDYzLjAwOTcgNjIgODJWNjJDNDggNjIgMzYgNzQgMzYgODhWMTQ0QzM2IDE1OCA0OCAxNzAgNjIgMTcwSDEzMEMxNDQgMTcwIDE1NiAxNTggMTU2IDE0NFY4OEMxNTYgNzQgMTQ0IDYyIDEzMCA2MlY4MkMxMzAgNjMuMDA5NyAxMTQuOTkgNDggOTYgNDhaIiBmaWxsPSIjNjZmY2YxIiBmaWxsLW9wYWNpdHk9IjAuOCIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudDBfbGluZWFyXzFfMSIgeDE9IjAiIHkxPSIwIiB4Mj0iMTkyIiB5Mj0iMTkyIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiM5YjU5YjYiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNjZmY2YxIi8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPHN2Zz4K",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiByeD0iNjQiIGZpbGw9InVybCgjZ3JhZGllbnQwX2xpbmVhcl8xXzEpIi8+CjxwYXRoIGQ9Ik0yNTYgMTI4QzE5Mi4wMjYgMTI4IDEzOCAxODIuMDI2IDEzOCAyNDZWMjQ2QzEyOCAyNDYgMTEyIDI2MiAxMTIgMjc4VjM4NEMxMTIgNDAwIDEyOCA0MTYgMTQ0IDQxNkgzNjhDMzg0IDQxNiA0MDAgNDAwIDQwMCAzODRWMjc4QzQwMCAyNjIgMzg0IDI0NiAzNjggMjQ2VjI0NkMzNjggMTgyLjAyNiAzMTMuOTc0IDEyOCAyNTYgMTI4WiIgZmlsbD0iIzY2ZmNmMSIgZmlsbC1vcGFjaXR5PSIwLjgiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQwX2xpbmVhcl8xXzEiIHgxPSIwIiB5MT0iMCIgeDI9IjUxMiIgeTI9IjUxMiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjOWI1OWI2Ii8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzY2ZmNmMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo=",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4MCIgaGVpZ2h0PSI3MjAiIHZpZXdCb3g9IjAgMCAxMjgwIDcyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEyODAiIGhlaWdodD0iNzIwIiBmaWxsPSIjMTIxMjEyIi8+CjxyZWN0IHg9IjQwIiB5PSI0MCIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjQwIiByeD0iMjAiIGZpbGw9InJnYmEoMjAsIDIwLCAyMCwgMC43KSIgc3Ryb2tlPSJyZ2JhKDE4NiwgODUsIDIxMSwgMC4zKSIvPgo8dGV4dCB4PSI2NDAiIHk9IjEwMCIgZm9udC1mYW1pbHk9Ik9yYml0cm9uIiBmb250LXNpemU9IjQ4IiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+U1RFQU1ZIERVTU1JTkczPC90ZXh0Pgo8dGV4dCB4PSI2NDAiIHk9IjE2MCIgZm9udC1mYW1pbHk9IlJhamRoYW5pIiBmb250LXNpemU9IjI0IiBmaWxsPSIjZTBlMGUwIiBvcGFjaXR5PSIwLjgiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlRoZSBVbHRpbWF0ZSBTdGVhbSBNYW5pZmVzdCBEYXRhYmFzZTwvdGV4dD4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudIGlkPSJncmFkaWVudCIgeDE9IjAiIHkxPSIwIiB4Mj0iMTI4MCIgeTI9IjAiPgo8c3RvcCBzdG9wLWNvbG9yPSIjZDY4OWZmIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzY2ZmNmMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo=",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "form_factor": "wide",
+      "label": "Steamy Dumplings Desktop View"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzc1IiBoZWlnaHQ9IjY2NyIgdmlld0JveD0iMCAwIDM3NSA2NjciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzNzUiIGhlaWdodD0iNjY3IiBmaWxsPSIjMTIxMjEyIi8+CjxyZWN0IHg9IjIwIiB5PSIyMCIgd2lkdGg9IjMzNSIgaGVpZ2h0PSI2MjciIHJ4PSIxNSIgZmlsbD0icmdiYSgyMCwgMjAsIDIwLCAwLjcpIiBzdHJva2U9InJnYmEoMTg2LCA4NSwgMjExLCAwLjMpIi8+Cjx0ZXh0IHg9IjE4Ny41IiB5PSI4MCIgZm9udC1mYW1pbHk9Ik9yYml0cm9uIiBmb250LXNpemU9IjI4IiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+U1RFQU1ZIERVTU1JTkczPC90ZXh0Pgo8dGV4dCB4PSIxODcuNSIgeT0iMTEwIiBmb250LWZhbWlseT0iUmFqZGhhbmkiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiNlMGUwZTAiIG9wYWNpdHk9IjAuOCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+VGhlIFVsdGltYXRlIFN0ZWFtIE1hbmlmZXN0IERhdGFiYXNlPC90ZXh0Pgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudCIgeDE9IjAiIHkxPSIwIiB4Mj0iMzc1IiB5Mj0iMCI+CjxzdG9wIHN0b3AtY29sb3I9IiNkNjg5ZmYiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNjZmY2YxIi8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPHN2Zz4K",
+      "sizes": "375x667",
+      "type": "image/svg+xml",
+      "form_factor": "narrow",
+      "label": "Steamy Dumplings Mobile View"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Search Games",
+      "short_name": "Search",
+      "description": "Search for Steam game manifests",
+      "url": "/#downloads",
+      "icons": [
+        {
+          "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCA5NiA5NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiByeD0iMTIiIGZpbGw9InVybCgjZ3JhZGllbnQwX2xpbmVhcl8xXzEpIi8+CjxjaXJjbGUgY3g9IjM2IiBjeT0iMzYiIHI9IjE2IiBzdHJva2U9IiM2NmZjZjEiIHN0cm9rZS13aWR0aD0iNCIvPgo8cGF0aCBkPSJtNDggNDggMTYgMTYiIHN0cm9rZT0iIzY2ZmNmMSIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQwX2xpbmVhcl8xXzEiIHgxPSIwIiB5MT0iMCIgeDI9Ijk2IiB5Mj0iOTYiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzliNTliNiIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM2NmZjZjEiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Browse All Games",
+      "short_name": "Games",
+      "description": "Browse all available games",
+      "url": "/#games",
+      "icons": [
+        {
+          "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCA5NiA5NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiByeD0iMTIiIGZpbGw9InVybCgjZ3JhZGllbnQwX2xpbmVhcl8xXzEpIi8+CjxyZWN0IHg9IjE2IiB5PSIyMCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjQ4IiByeD0iNCIgZmlsbD0iIzY2ZmNmMSIgZmlsbC1vcGFjaXR5PSIwLjMiLz4KPHJlY3QgeD0iMjAiIHk9IjI0IiB3aWR0aD0iNTYiIGhlaWdodD0iNDAiIHJ4PSIyIiBmaWxsPSIjNjZmY2YxIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50MF9saW5lYXJfMV8xIiB4MT0iMCIgeTE9IjAiIHgyPSI5NiIgeTI9Ijk2IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiM5YjU5YjYiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNjZmY2YxIi8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPC9zdmc+Cg==",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "prefer_related_applications": false
+}

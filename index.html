@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Ultimate Steam Manifest Database - Search, download, and explore Steam game manifests">
+    <meta name="keywords" content="steam, manifests, games, downloads, gaming">
+    <meta name="author" content="Steamy Dumplings">
+    <meta name="theme-color" content="#9b59b6">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Steamy Dumplings | Steam Manifests">
+    <meta property="og:description" content="The Ultimate Steam Manifest Database">
+    <meta property="og:site_name" content="Steamy Dumplings">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Steamy Dumplings | Steam Manifests">
+    <meta property="twitter:description" content="The Ultimate Steam Manifest Database">
+    
+    <title>Steamy Dumplings | Steam Manifests</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;600&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥟</text></svg>">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥟</text></svg>">
+</head>
+<body>
+    <div class="neon-bg" aria-hidden="true"></div>
+    <div class="container">
+        <header role="banner">
+            <h1 class="neon-text">STEAMY <span class="highlight">DUMPLINGS</span></h1>
+            <p class="subtitle">The Ultimate Steam Manifest Database</p>
+        </header>
+        
+        <nav role="navigation" aria-label="Main navigation">
+            <ul role="tablist">
+                <li role="presentation">
+                    <button role="tab" aria-selected="true" aria-controls="home-panel" id="home-tab" class="tab-button active">
+                        <i class="fas fa-home" aria-hidden="true"></i> 
+                        <span>Home</span>
+                    </button>
+                </li>
+                <li role="presentation">
+                    <button role="tab" aria-selected="false" aria-controls="downloads-panel" id="downloads-tab" class="tab-button">
+                        <i class="fas fa-download" aria-hidden="true"></i> 
+                        <span>Downloads</span>
+                    </button>
+                </li>
+                <li role="presentation">
+                    <button role="tab" aria-selected="false" aria-controls="games-panel" id="games-tab" class="tab-button">
+                        <i class="fas fa-gamepad" aria-hidden="true"></i> 
+                        <span>Games</span>
+                    </button>
+                </li>
+                <li role="presentation">
+                    <button role="tab" aria-selected="false" aria-controls="steam-tools-panel" id="steam-tools-tab" class="tab-button">
+                        <i class="fab fa-steam" aria-hidden="true"></i> 
+                        <span>Steam Tools</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        
+        <main role="main">
+            <section id="home-panel" class="tab-panel active" role="tabpanel" aria-labelledby="home-tab">
+                <div class="hero">
+                    <h2>Search, Download, and Explore Steam Game Manifests</h2>
+                    <p>Use the tabs above to browse our collection of Steam game manifests.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number" id="total-games">0</span>
+                            <span class="stat-label">Games Available</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="total-downloads">0</span>
+                            <span class="stat-label">Downloads</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="downloads-panel" class="tab-panel" role="tabpanel" aria-labelledby="downloads-tab">
+                <div class="search-section">
+                    <h2>Search Games</h2>
+                    <div class="search-container">
+                        <div class="search-input-wrapper">
+                            <input type="text" id="search-input" placeholder="Search App ID or Game Name..." 
+                                   aria-label="Search for games by App ID or name" autocomplete="off">
+                            <button id="search-button" class="neon-button" aria-label="Search games">
+                                <i class="fas fa-search" aria-hidden="true"></i> 
+                                <span>Search</span>
+                            </button>
+                        </div>
+                        <div class="filter-controls">
+                            <select id="sort-select" aria-label="Sort games">
+                                <option value="name-asc">Name A-Z</option>
+                                <option value="name-desc">Name Z-A</option>
+                                <option value="id-asc">App ID ↑</option>
+                                <option value="id-desc">App ID ↓</option>
+                            </select>
+                            <button id="clear-search" class="clear-button" aria-label="Clear search">
+                                <i class="fas fa-times" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="search-status" class="search-status" aria-live="polite"></div>
+                </div>
+                <div id="search-results" class="results-grid" role="region" aria-label="Search results"></div>
+            </section>
+            
+            <section id="games-panel" class="tab-panel" role="tabpanel" aria-labelledby="games-tab">
+                <div class="games-section">
+                    <h2>All Games</h2>
+                    <div class="games-controls">
+                        <div class="view-toggle">
+                            <button id="grid-view" class="view-button active" aria-label="Grid view">
+                                <i class="fas fa-th" aria-hidden="true"></i>
+                            </button>
+                            <button id="list-view" class="view-button" aria-label="List view">
+                                <i class="fas fa-list" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="games-filter">
+                            <input type="text" id="games-filter" placeholder="Filter games..." aria-label="Filter games">
+                        </div>
+                    </div>
+                    <div class="games-grid" id="games-grid" role="region" aria-label="Games collection"></div>
+                </div>
+            </section>
+            
+            <section id="steam-tools-panel" class="tab-panel" role="tabpanel" aria-labelledby="steam-tools-tab">
+                <div class="tools-section">
+                    <h2>Steam Tools</h2>
+                    <div class="tool-card">
+                        <i class="fab fa-steam tool-icon" aria-hidden="true"></i>
+                        <h3>Steam Tools</h3>
+                        <p>Download essential tools for Steam manifest management.</p>
+                        <a href="https://steamtools.net" class="neon-button" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-download" aria-hidden="true"></i> 
+                            <span>Download Now</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer role="contentinfo">
+            <p>&copy; 2025 Steamy Dumplings. All rights reserved.</p>
+            <div class="footer-links">
+                <button onclick="app.showModal('privacy')" aria-label="Privacy Policy">Privacy</button>
+                <button onclick="app.showModal('terms')" aria-label="Terms of Service">Terms</button>
+                <button onclick="app.showModal('contact')" aria-label="Contact Us">Contact</button>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Loading indicator -->
+    <div id="loading" class="loading-indicator" aria-hidden="true">
+        <div class="spinner"></div>
+        <span>Loading...</span>
+    </div>
+    
+    <!-- Toast notifications -->
+    <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+    
+    <!-- Modal -->
+    <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Modal Title</h2>
+                <button class="modal-close" onclick="app.hideModal()" aria-label="Close modal">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Modal content will be inserted here -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
