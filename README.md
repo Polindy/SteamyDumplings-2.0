@@ -10,6 +10,7 @@ A modern, responsive web application for browsing and downloading Steam game man
 - **Download Links**: Direct access to game manifest downloads
 - **Favorites**: Save your favorite games locally
 - **Copy App IDs**: One-click copying of Steam App IDs
+- **Feature Requests**: Request Features or Manifests for the website
 
 ### 🚀 Modern Features
 - **Progressive Web App (PWA)**: Install as a native app on mobile devices
@@ -220,3 +221,4 @@ For issues, feature requests, or questions:
 ---
 
 **Steamy Dumplings** - The Ultimate Steam Manifest Database 🥟✨
+
